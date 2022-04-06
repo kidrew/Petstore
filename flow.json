@@ -17,6 +17,10 @@
 		"emulator-account": {
 			"address": "f8d6e0586b0a20c7",
 			"key": "a38dbf2788627082a74a067828f4a8f10a86f4b7d44d0b6e0dcd962cc95f55dd"
+		},
+		"test-account": {
+			"address": "0x01cf0e2f2f715450",
+			"key": "8dd743a4d452c573928304d292c56c9c518c012f13521df2e97c9e9aa72fba2c"
 		}
 	},
 	"deployments": {
