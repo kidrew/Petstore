@@ -1,4 +1,4 @@
-// Import the 'FileSelector' module, which does not exist yet.
+import mintToken from '../flow/transactions/MintToken.tx.js';
 import { useState } from 'react';
 import FileSelector from './FileSelector.js';
 
@@ -26,9 +26,18 @@ const Form = () => {
         setPet({ ...pet, age });
     }
 
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        try {
+            await mintToken(pet);
+        } catch (err) {
+            console.error(err);
+        }
+    }
+
     return (
         <div style={style}>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className="row">
                     <FileSelector pet={pet} setPet={setPet} />
                     <div>
